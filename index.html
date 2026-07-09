@@ -213,7 +213,8 @@ const PLATFORMS = [
 
 const MONTHS = [
   { id:'apr26', label:'April 2026' },
-  { id:'may26', label:'May 2026' }
+  { id:'may26', label:'May 2026' },
+  { id:'jun26', label:'June 2026' }
 ];
 
 const DATA = {
@@ -264,10 +265,47 @@ const DATA = {
       { icon:'🎯', title:'50%+ of posts should be reels or have a hook', text:'To maximize reach and engagement, aim for at least half of all content to be in reel format or include a specific hook in the first few seconds. This aligns with what the algorithm is rewarding.', type:'action', tag:'Next step' },
       { icon:'📚', title:'Audience loves educational content', text:'The data confirms that PAP\'s audience responds best to educational, informative content. Continue leading with insights and knowledge that position PAP as a trusted authority.', type:'positive', tag:'Validated' }
     ]
+  },
+  jun26: {
+    instagram: { followers:667, views:'4K', viewsNum:4000, posts:8, engagement:145, engagementRate:'3.58%', engNum:3.58, growth:163 },
+    facebook:  { followers:0, views:'0', viewsNum:0, posts:9, engagement:1, engagementRate:'0.05%', engNum:0.05, growth:0 },
+    linkedin:  { followers:14, views:'113', viewsNum:113, posts:10, engagement:32, engagementRate:'18.63%', engNum:18.63, growth:9 },
+    aggregate: { totalEngagement:178, avgEngagementRate:'7.42%', avgEngNum:7.42, totalViews:4113, totalFollowers:681, growth:172, totalPosts:27 },
+    insights: { worked:'Reels worked because they grab audience attention. Additionally, the hook at the beginning of the video did well which means audience spent more time watching video.', didntWork:'Static, no-hook, there-for-the-aesthetic posts did not do as well as others. However, they still did reasonably well.', improvements:'Making at least 50% or more of our posts reels or include a specific hook.', audienceInsight:'Our audience likes educational content.' },
+    audience: { gender:'53% Male / 47% Female', location:'99% US — NYC (14%), Oakland FL (5%), LA (5%), Phoenix (4%)', age:'Strongest: 45–54 & 55–64 (60–61% male)', profession:'Investors / Finance Professionals' },
+    ads: { spend:'—', impressions:'—', clicks:'—', ctr:'—', conversions:'—', cpc:'—', roas:'—', campaigns:[] },
+    topPosts: [
+      { rank:1, platform:'Instagram', type:'Reel', url:'https://www.instagram.com/reels/DZaVHJsFPoS/', caption:'Top-performing reel — strong hook and audience attention drove high engagement.' },
+      { rank:2, platform:'Instagram', type:'Reel', url:'https://www.instagram.com/reels/DZITd0sDzcg/', caption:'Second top reel — reels continue to dominate as PAP\'s strongest organic format.' },
+      { rank:3, platform:'Instagram', type:'Post', url:'https://www.instagram.com/p/DZxf8L9FrEc/', caption:'Top static post — educational content resonated well with the target investor audience.' },
+      { rank:1, platform:'LinkedIn', type:'Post', url:'https://www.linkedin.com/feed/update/urn:li:ugcPost:7473042709931462656/', caption:'Top LinkedIn post — strong engagement with the professional investor audience.' },
+      { rank:2, platform:'LinkedIn', type:'Post', url:'https://www.linkedin.com/feed/update/urn:li:share:7473766910065770496/', caption:'Second top LinkedIn post — continued traction with B2B finance audience.' },
+      { rank:3, platform:'LinkedIn', type:'Post', url:'https://www.linkedin.com/feed/update/urn:li:ugcPost:7470506190511349760/', caption:'Third top LinkedIn post — thought leadership content performing well.' },
+      { rank:1, platform:'Facebook', type:'Post', url:'https://www.facebook.com/permalink.php?story_fbid=pfbid02Pv1X79TuHswi1T5d5dzAA2XmBPnvH99qK49BBVPbo9UMZgtTgv6pfmRHpz4HSqQrl&id=61582306748110', caption:'Top Facebook post — best organic reach and engagement on the platform this month.' },
+      { rank:2, platform:'Facebook', type:'Post', url:'https://www.facebook.com/permalink.php?story_fbid=pfbid02V6mqv4N8BSeKTpn9Pyazrjt6UUBr6qPkAdUX3iaakGMWAdnmSV3YmRcv9b4ubSVul&id=61582306748110', caption:'Second top Facebook post — resonated with the Facebook audience.' },
+      { rank:3, platform:'Facebook', type:'Reel', url:'https://www.facebook.com/reel/1538607511009726', caption:'Top Facebook reel — video format showing promise on this platform.' }
+    ],
+    bottomPosts: [
+      { rank:1, platform:'Instagram', type:'Post', url:'https://www.instagram.com/p/DZVLSa8jaTx/', caption:'Static post without a strong hook — aesthetic-only content underperformed relative to reels.' },
+      { rank:2, platform:'Instagram', type:'Reel', url:'https://www.instagram.com/reels/DZsWjT_EfI1/', caption:'Lower-performing reel — may have lacked a compelling opening hook compared to top performers.' },
+      { rank:3, platform:'Instagram', type:'Post', url:'https://www.instagram.com/p/DZnMy00lpea/', caption:'Static post — no-hook format did not drive engagement as effectively.' },
+      { rank:1, platform:'LinkedIn', type:'Post', url:'https://www.linkedin.com/feed/update/urn:li:ugcPost:7467244191174283268/', caption:'Lowest LinkedIn post — topic or format didn\'t resonate as strongly with the professional audience.' },
+      { rank:2, platform:'LinkedIn', type:'Post', url:'https://www.linkedin.com/feed/update/urn:li:ugcPost:7467969288377720832/', caption:'Second lowest LinkedIn post — lower engagement relative to other content.' },
+      { rank:3, platform:'LinkedIn', type:'Post', url:'https://www.linkedin.com/feed/update/urn:li:share:7468693469306474496/', caption:'Third lowest LinkedIn post — underperformed compared to top LinkedIn content.' },
+      { rank:1, platform:'Facebook', type:'Reel', url:'https://www.facebook.com/reel/1400061732156918', caption:'Lowest Facebook reel — organic reach on Facebook remains a challenge.' },
+      { rank:2, platform:'Facebook', type:'Post', url:'https://www.facebook.com/permalink.php?story_fbid=pfbid028Nv9aw9TKCNSfp1Wd67cwfoWcX5awdvHsNR13Vdwknn4NTiNRYFPDQa6yb6PznLql&id=61582306748110', caption:'Second lowest Facebook post — limited organic reach and engagement.' },
+      { rank:3, platform:'Facebook', type:'Post', url:'https://www.facebook.com/permalink.php?story_fbid=pfbid0GoxhFhkPz4UtfCfqdcuLQMqaj9bGEnQeh8sHgg2TRoVMt3jgGm6zSMtxYhdJa5u3l&id=61582306748110', caption:'Third lowest Facebook post — underperformed in the Facebook feed.' }
+    ],
+    feedback: [
+      { icon:'🎬', title:'Reels with hooks remain the top performers', text:'For the second month running, reels with strong opening hooks are driving the best organic results on Instagram. The 3.58% engagement rate on IG (up from 1.88% in May) confirms this strategy is working.', type:'positive', tag:'Keep doing' },
+      { icon:'💼', title:'LinkedIn is punching above its weight', text:'With an 18.63% engagement rate across 10 posts, LinkedIn is delivering exceptional engagement despite lower reach (113 views). The professional investor audience is highly engaged with PAP\'s content.', type:'positive', tag:'Standout' },
+      { icon:'🚫', title:'Facebook needs a strategy rethink', text:'Zero reach and near-zero engagement across 9 posts signals Facebook organic isn\'t delivering. Consider reallocating effort to Instagram and LinkedIn, or testing paid promotion on Facebook.', type:'caution', tag:'Pivot' },
+      { icon:'📈', title:'163 new Instagram followers — strong growth continues', text:'Instagram follower growth remains robust at 163 new followers this month (vs. 133 in May), bringing the total to 667. The content strategy is attracting the right audience consistently.', type:'action', tag:'Momentum' }
+    ]
   }
 };
 
-let currentMonth = 'may26';
+let currentMonth = 'jun26';
 let currentTab = 'overview';
 
 document.getElementById('currentDate').textContent = new Date().toLocaleDateString('en-US',{weekday:'long',year:'numeric',month:'long',day:'numeric'});
