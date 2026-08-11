@@ -214,7 +214,8 @@ const PLATFORMS = [
 const MONTHS = [
   { id:'apr26', label:'April 2026' },
   { id:'may26', label:'May 2026' },
-  { id:'jun26', label:'June 2026' }
+  { id:'jun26', label:'June 2026' },
+  { id:'jul26', label:'July 2026' }
 ];
 
 const DATA = {
@@ -302,10 +303,47 @@ const DATA = {
       { icon:'🚫', title:'Facebook needs a strategy rethink', text:'Zero reach and near-zero engagement across 9 posts signals Facebook organic isn\'t delivering. Consider reallocating effort to Instagram and LinkedIn, or testing paid promotion on Facebook.', type:'caution', tag:'Pivot' },
       { icon:'📈', title:'163 new Instagram followers — strong growth continues', text:'Instagram follower growth remains robust at 163 new followers this month (vs. 133 in May), bringing the total to 667. The content strategy is attracting the right audience consistently.', type:'action', tag:'Momentum' }
     ]
+  },
+  jul26: {
+    instagram: { followers:681, views:'340', viewsNum:340, posts:6, engagement:37, engagementRate:'6.30%', engNum:6.30, growth:14 },
+    facebook:  { followers:0, views:'248', viewsNum:248, posts:6, engagement:2, engagementRate:'0.50%', engNum:0.50, growth:0 },
+    linkedin:  { followers:15, views:'47', viewsNum:47, posts:5, engagement:4, engagementRate:'1.40%', engNum:1.40, growth:1 },
+    aggregate: { totalEngagement:43, avgEngagementRate:'2.73%', avgEngNum:2.73, totalViews:635, totalFollowers:696, growth:15, totalPosts:17 },
+    insights: { worked:'The July 3 image and both Reels on Instagram were clear standouts — human-centered, emotionally-led content outperformed informational posts. On LinkedIn, video content led in impressions and reach, with 3 of 5 posts earning at least 1 like despite only 10 followers. On Facebook, the two Reels accounted for 100% of the platform\'s reach — the Jul 29 Reel pulled 205 reach and 223 views alone.', didntWork:'Static images underperformed across all platforms. On Instagram, shares were 0 across all posts — no content was compelling enough to be sent to someone else. On LinkedIn, zero comments limited algorithmic distribution. On Facebook, all 4 static posts received 0 reach, 0 views, 0 likes, and 0 comments.', improvements:'Lead with questions or tension in hooks on Instagram. Add CTAs that drive saves or shares. Increase Reel frequency. On LinkedIn, end every post with a direct question and tag relevant people. On Facebook, shift the content mix heavily toward Reels and repurpose Instagram Reels directly.', audienceInsight:'Instagram\'s audience (681 followers, net +14) is engaged but small — they respond to emotional hooks and human stories more than informational posts. LinkedIn is gaining traction beyond its 15-follower base through discovery. Facebook\'s Reel reach comes from non-followers through the video feed — a positive signal, but no community yet to amplify it.' },
+    audience: { gender:'53% Male / 47% Female', location:'99% US — NYC (14%), Oakland FL (5%), LA (5%), Phoenix (4%)', age:'Strongest: 45–54 & 55–64 (60–61% male)', profession:'Investors / Finance Professionals' },
+    ads: { spend:'—', impressions:'—', clicks:'—', ctr:'—', conversions:'—', cpc:'—', roas:'—', campaigns:[] },
+    topPosts: [
+      { rank:1, platform:'Instagram', type:'Post', url:'https://www.instagram.com/p/DaVpyxVFtil/', caption:'Top post — human-centered, emotionally-led content outperformed informational posts. Reach: 74, Impressions: 162, Likes: 5, Comments: 4, Eng Rate: 10%.' },
+      { rank:2, platform:'Instagram', type:'Reel', url:'https://www.instagram.com/reel/DbLgxoiiqpL/', caption:'Top reel — strong hook drove audience retention. Reach: 153, Impressions: 191, Likes: 8, Comments: 1, Eng Rate: 9%.' },
+      { rank:3, platform:'Instagram', type:'Reel', url:'https://www.instagram.com/reel/DbYftUyiPkn/', caption:'Second top reel — emotional content resonated. Reach: 46, Impressions: 65, Likes: 7, Eng Rate: 7%.' },
+      { rank:1, platform:'LinkedIn', type:'Post', url:'https://www.linkedin.com/feed/update/urn:li:share:7485710312969510912', caption:'Top LinkedIn post — reached beyond the 10-follower base. Reach: 12, Impressions: 30, Likes: 1, Eng Rate: 2%.' },
+      { rank:2, platform:'LinkedIn', type:'Post', url:'https://www.linkedin.com/feed/update/urn:li:ugcPost:7486435275590729728', caption:'Second top LinkedIn post — impressions exceeded reach through discovery. Reach: 15, Impressions: 17, Likes: 1, Eng Rate: 1%.' },
+      { rank:3, platform:'LinkedIn', type:'Post', url:'https://www.linkedin.com/feed/update/urn:li:share:7487522242747301888', caption:'Third top LinkedIn post — trust and transparency messaging resonated. Reach: 7, Impressions: 8, Likes: 1, Eng Rate: 1%.' },
+      { rank:1, platform:'Facebook', type:'Reel', url:'https://www.facebook.com/reel/28758484217072719/', caption:'Top Facebook reel — Reels accounted for 100% of Facebook\'s reach this month. Reach: 205, Impressions: 223, Likes: 2, Eng Rate: 3%.' },
+      { rank:2, platform:'Facebook', type:'Reel', url:'https://www.facebook.com/reel/920278377779547/', caption:'Second top Facebook reel — video format is the only way to surface on Facebook. Reach: 42, Impressions: 47.' },
+      { rank:3, platform:'Facebook', type:'Post', url:'https://www.facebook.com/122124604251076891/posts/122147716683076891', caption:'Top Facebook static post — minimal reach (1) compared to Reels.' }
+    ],
+    bottomPosts: [
+      { rank:1, platform:'Instagram', type:'Post', url:'https://www.instagram.com/p/DbGXKvvEtHj/', caption:'Static image underperformed — mid-to-late month static posts lacked hooks. Reach: 23, Impressions: 53, Likes: 3, Eng Rate: 3%.' },
+      { rank:2, platform:'Instagram', type:'Post', url:'https://www.instagram.com/p/DbTPJJ3GVG7/', caption:'Static post — no shares, limited reach. Reach: 27, Impressions: 70, Likes: 4, Eng Rate: 4%.' },
+      { rank:3, platform:'Instagram', type:'Post', url:'https://www.instagram.com/p/DbdpMg5DZvr/', caption:'Lowest-performing IG post — informational content didn\'t connect emotionally. Reach: 17, Impressions: 36, Likes: 5, Eng Rate: 5%.' },
+      { rank:1, platform:'LinkedIn', type:'Post', url:'https://www.linkedin.com/feed/update/urn:li:share:7478855121653710848', caption:'Lowest LinkedIn post — zero comments limited distribution. Reach: 5, Impressions: 7, Eng Rate: 2%.' },
+      { rank:2, platform:'LinkedIn', type:'Post', url:'https://www.linkedin.com/feed/update/urn:li:ugcPost:7488262316900417536', caption:'Second lowest LinkedIn post — needs a direct question to spark conversation. Reach: 8, Impressions: 25, Likes: 1, Eng Rate: 1%.' },
+      { rank:3, platform:'LinkedIn', type:'Post', url:'https://www.linkedin.com/feed/update/urn:li:share:7487522242747301888', caption:'Third lowest LinkedIn post — underperformed relative to other content. Reach: 7, Impressions: 8, Likes: 1, Eng Rate: 1%.' },
+      { rank:1, platform:'Facebook', type:'Post', url:'https://www.facebook.com/122124604251076891/posts/122144994885076891', caption:'Static post — 0 reach, 0 views, 0 likes, 0 comments. No measurable impact.' },
+      { rank:2, platform:'Facebook', type:'Post', url:'https://www.facebook.com/122124604251076891/posts/122147176965076891', caption:'Static post — zero traction. Static format generates no organic reach on Facebook.' },
+      { rank:3, platform:'Facebook', type:'Post', url:'https://www.facebook.com/122124604251076891/posts/122148071661076891', caption:'Static post — no measurable engagement. Reels are the only viable organic format on Facebook.' }
+    ],
+    feedback: [
+      { icon:'🎭', title:'Emotional content beats informational — lean into human stories', text:'On Instagram, human-centered and emotionally-led content clearly outperformed informational posts. Content that makes investors feel seen ("you\'ve been waiting for the right time") outperforms content that states a value ("trust is the foundation"). Lean into emotional hooks and human stories.', type:'positive', tag:'Keep doing' },
+      { icon:'🎬', title:'Reels are the only format that works on Facebook', text:'The two Reels accounted for 100% of Facebook\'s reach and views. All 4 static posts got literally zero reach. Shift the Facebook content mix entirely toward Reels — repurpose Instagram Reels directly to Facebook.', type:'action', tag:'Critical shift' },
+      { icon:'💬', title:'Zero comments and shares — content needs to spark conversation', text:'Shares were 0 across all Instagram posts and comments were 0 across all LinkedIn posts. Lead with questions or tension in hooks. Add CTAs that drive saves, shares, or comments. On LinkedIn, end every post with a direct question and tag relevant people.', type:'caution', tag:'Pivot' },
+      { icon:'🔍', title:'LinkedIn gaining traction beyond its tiny follower base', text:'Despite only 15 followers, LinkedIn impressions consistently exceeded reach — meaning content is being discovered through hashtags and LinkedIn\'s distribution. Trust and transparency messaging is well-suited for this audience. Priority: spark conversation — one post with 10 comments will do more for growth than 10 posts with 0.', type:'positive', tag:'Momentum' }
+    ]
   }
 };
 
-let currentMonth = 'jun26';
+let currentMonth = 'jul26';
 let currentTab = 'overview';
 
 document.getElementById('currentDate').textContent = new Date().toLocaleDateString('en-US',{weekday:'long',year:'numeric',month:'long',day:'numeric'});
