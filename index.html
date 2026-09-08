@@ -215,7 +215,8 @@ const MONTHS = [
   { id:'apr26', label:'April 2026' },
   { id:'may26', label:'May 2026' },
   { id:'jun26', label:'June 2026' },
-  { id:'jul26', label:'July 2026' }
+  { id:'jul26', label:'July 2026' },
+  { id:'aug26', label:'August 2026' }
 ];
 
 const DATA = {
@@ -340,10 +341,47 @@ const DATA = {
       { icon:'💬', title:'Zero comments and shares — content needs to spark conversation', text:'Shares were 0 across all Instagram posts and comments were 0 across all LinkedIn posts. Lead with questions or tension in hooks. Add CTAs that drive saves, shares, or comments. On LinkedIn, end every post with a direct question and tag relevant people.', type:'caution', tag:'Pivot' },
       { icon:'🔍', title:'LinkedIn gaining traction beyond its tiny follower base', text:'Despite only 15 followers, LinkedIn impressions consistently exceeded reach — meaning content is being discovered through hashtags and LinkedIn\'s distribution. Trust and transparency messaging is well-suited for this audience. Priority: spark conversation — one post with 10 comments will do more for growth than 10 posts with 0.', type:'positive', tag:'Momentum' }
     ]
+  },
+  aug26: {
+    instagram: { followers:713, views:'665', viewsNum:665, posts:10, engagement:68, engagementRate:'6.80%', engNum:6.80, growth:32 },
+    facebook:  { followers:0, views:'453', viewsNum:453, posts:12, engagement:2, engagementRate:'0.17%', engNum:0.17, growth:0 },
+    linkedin:  { followers:15, views:'55', viewsNum:55, posts:13, engagement:3, engagementRate:'0.38%', engNum:0.38, growth:0 },
+    aggregate: { totalEngagement:73, avgEngagementRate:'2.45%', avgEngNum:2.45, totalViews:1173, totalFollowers:728, growth:32, totalPosts:35 },
+    insights: { worked:'Instagram carried the month — 68 of 73 total cross-platform engagements happened here. The Aug 19 static image ("My passion is seeing capital become a force for good...") was the single best post at 19 likes and 19% engagement rate, proving values-driven mission statements resonate even without video. Reels performed consistently well (76–163 views each). On Facebook, Reels were the only format generating visibility — the Aug 24 and Aug 28 Reels pulled 223 and 220 reach respectively, essentially all of Facebook\'s monthly reach from just 2–3 Reels out of 12 posts.', didntWork:'The Aug 31 carousel ("Enough Said") badly underperformed at just 1 engagement despite decent reach (41 views) — carousels are the weakest format. On LinkedIn, more than half the posts (7 of 13) closed at zero reach or engagement entirely, including both videos posted late in the month. On Facebook, every static image/text post (10 of 12) closed at zero reach and zero engagement, no exceptions.', improvements:'Lean further into first-person, values/mission-driven captions like the Aug 19 winner — it outperformed everything else by 2x. Reconsider the carousel format. On LinkedIn, shift toward images/text and away from video. On Facebook, stop posting static content entirely and add explicit comment-bait CTAs to Reels.', audienceInsight:'Instagram\'s audience engages most with authentic, personal conviction statements over pure education — they want to know why you do this, not just what a mortgage note is. This is the most engaged, highest-intent audience across all three platforms. LinkedIn presence is currently too small to read real signal from (10 followers, 0 growth). Facebook audience responds to direct objection-handling hooks but is browsing, not engaging — needs a stronger ask to move from watching to reacting.' },
+    audience: { gender:'54.6% Male', location:'New York, NY / Los Angeles, CA / Philadelphia, PA', age:'25–34, 35–44, 45–54, 55–64', profession:'Investors / Finance Professionals' },
+    ads: { spend:'—', impressions:'—', clicks:'—', ctr:'—', conversions:'—', cpc:'—', roas:'—', campaigns:[] },
+    topPosts: [
+      { rank:1, platform:'Instagram', type:'Post', url:'https://www.instagram.com/p/DcOkhlZFLSb/', caption:'Best post of the month — values-driven mission statement at 19 likes and 19% engagement rate. Reach: 61, Impressions: 139.' },
+      { rank:2, platform:'Instagram', type:'Reel', url:'https://www.instagram.com/reels/DcmSASlDs66/', caption:'Top reel — myth-busting content performed consistently well. Reach: 76, Impressions: 104, Likes: 9, Comments: 1, Eng Rate: 11%.' },
+      { rank:3, platform:'Instagram', type:'Reel', url:'https://www.instagram.com/reels/Db9FF06FESv/', caption:'Second top reel — strong reach at 138. Impressions: 163, Likes: 9, Eng Rate: 9%.' },
+      { rank:1, platform:'LinkedIn', type:'Post', url:'https://www.linkedin.com/feed/update/urn:li:share:7489726768875130880/', caption:'Top LinkedIn post — images slightly outperformed video. Reach: 12, Impressions: 14, Likes: 1, Eng Rate: 1%.' },
+      { rank:2, platform:'LinkedIn', type:'Post', url:'https://www.linkedin.com/feed/update/urn:li:ugcPost:7493411129390542848/', caption:'Second top LinkedIn post — jargon-free promise-style hooks are the strongest angle. Reach: 3, Impressions: 8, Likes: 1, Eng Rate: 1%.' },
+      { rank:3, platform:'LinkedIn', type:'Post', url:'https://www.linkedin.com/feed/update/urn:li:share:7495872782673625088/', caption:'Third top LinkedIn post. Reach: 7, Impressions: 13, Likes: 1, Eng Rate: 1%.' },
+      { rank:1, platform:'Facebook', type:'Reel', url:'https://www.facebook.com/reel/1501774971702077', caption:'Top Facebook post — minimal reach compared to Reels. Reach: 8, Impressions: 9, Likes: 1, Eng Rate: 1%.' },
+      { rank:2, platform:'Facebook', type:'Reel', url:'https://www.facebook.com/reel/1098262755970478', caption:'Top Facebook reel — "Who\'s paying me?" hook drove 223 reach and 239 impressions. Direct-question framing works.' },
+      { rank:3, platform:'Facebook', type:'Reel', url:'https://www.facebook.com/reel/1042577415035731', caption:'Second top Facebook reel — "Isn\'t this just for wealthy investors?" pulled 220 reach and 238 impressions.' }
+    ],
+    bottomPosts: [
+      { rank:1, platform:'Instagram', type:'Post', url:'https://www.instagram.com/p/DcuATm2lBl4/', caption:'Carousel "Enough Said" — badly underperformed at just 1 engagement despite 41 views. Reach: 14, Impressions: 41, Likes: 1, Eng Rate: 1%.' },
+      { rank:2, platform:'Instagram', type:'Post', url:'https://www.instagram.com/p/DcCO0I-k049/', caption:'"Risk" Reel got strong reach (181 views) but soft conversion — only 4 likes. Reach: 151, Impressions: 181, Likes: 4, Eng Rate: 4%.' },
+      { rank:3, platform:'Instagram', type:'Reel', url:'https://www.instagram.com/reels/DbrDgLAEVOu/', caption:'Lower-performing reel. Reach: 26, Impressions: 45, Likes: 4, Eng Rate: 4%.' },
+      { rank:1, platform:'LinkedIn', type:'Post', url:'https://www.linkedin.com/feed/update/urn:li:share:7490149557801127936/', caption:'Zero reach and zero engagement — closed with no measurable impact.' },
+      { rank:2, platform:'LinkedIn', type:'Post', url:'https://www.linkedin.com/feed/update/urn:li:share:7491599115215245313/', caption:'Zero reach and zero engagement — video format consistently weakest on LinkedIn.' },
+      { rank:3, platform:'LinkedIn', type:'Post', url:'https://www.linkedin.com/feed/update/urn:li:ugcPost:7490874403451326464/', caption:'Minimal reach (2 impressions) — LinkedIn posts struggling to gain distribution.' },
+      { rank:1, platform:'Facebook', type:'Post', url:'https://www.facebook.com/122124604251076891/posts/122148392847076891', caption:'Static post — 0 reach, 0 views, 0 likes, 0 comments. No measurable impact.' },
+      { rank:2, platform:'Facebook', type:'Post', url:'https://www.facebook.com/122124604251076891/posts/122148844545076891', caption:'Static post — zero traction. Facebook will not distribute static content organically.' },
+      { rank:3, platform:'Facebook', type:'Reel', url:'https://www.facebook.com/reel/1777140080387943', caption:'Lowest-performing reel — even Reels converting almost nothing to likes or comments.' }
+    ],
+    feedback: [
+      { icon:'🔥', title:'Values-driven, first-person content is your winner', text:'The Aug 19 post ("My passion is seeing capital become a force for good") outperformed everything else by 2x at 19% engagement. Your Instagram audience wants authentic, personal conviction — why you do this, not just what a mortgage note is. Lean further into this style.', type:'positive', tag:'Keep doing' },
+      { icon:'🚫', title:'Stop posting static content on Facebook — it gets zero distribution', text:'10 of 12 static posts got literally 0 reach, 0 views, 0 likes, 0 comments. Only Reels generate any visibility on Facebook. Shift entirely to Reels and add explicit comment-bait CTAs to convert passive views into engagement.', type:'caution', tag:'Critical shift' },
+      { icon:'🤔', title:'Is LinkedIn worth the effort right now?', text:'13 posts published, 3 total interactions, 0 new followers. More than half the posts got zero reach. With 10 followers and no growth, it\'s worth asking whether LinkedIn deserves the same posting cadence as Instagram, or if that effort is better spent doubling down where the audience is.', type:'action', tag:'Evaluate' },
+      { icon:'📊', title:'Instagram is your engine — 93% of all engagement happens here', text:'68 of 73 total cross-platform engagements came from Instagram. 32 new followers this month (713 total). Engagement rate at 6.80%. This is the most engaged, highest-intent audience across all three platforms — prioritize it.', type:'positive', tag:'Momentum' }
+    ]
   }
 };
 
-let currentMonth = 'jul26';
+let currentMonth = 'aug26';
 let currentTab = 'overview';
 
 document.getElementById('currentDate').textContent = new Date().toLocaleDateString('en-US',{weekday:'long',year:'numeric',month:'long',day:'numeric'});
