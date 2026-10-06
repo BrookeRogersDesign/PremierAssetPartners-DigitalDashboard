@@ -216,7 +216,8 @@ const MONTHS = [
   { id:'may26', label:'May 2026' },
   { id:'jun26', label:'June 2026' },
   { id:'jul26', label:'July 2026' },
-  { id:'aug26', label:'August 2026' }
+  { id:'aug26', label:'August 2026' },
+  { id:'sep26', label:'September 2026' }
 ];
 
 const DATA = {
@@ -378,10 +379,42 @@ const DATA = {
       { icon:'🤔', title:'Is LinkedIn worth the effort right now?', text:'13 posts published, 3 total interactions, 0 new followers. More than half the posts got zero reach. With 10 followers and no growth, it\'s worth asking whether LinkedIn deserves the same posting cadence as Instagram, or if that effort is better spent doubling down where the audience is.', type:'action', tag:'Evaluate' },
       { icon:'📊', title:'Instagram is your engine — 93% of all engagement happens here', text:'68 of 73 total cross-platform engagements came from Instagram. 32 new followers this month (713 total). Engagement rate at 6.80%. This is the most engaged, highest-intent audience across all three platforms — prioritize it.', type:'positive', tag:'Momentum' }
     ]
+  },
+  sep26: {
+    instagram: { followers:725, views:'245', viewsNum:245, posts:6, engagement:28, engagementRate:'4.70%', engNum:4.70, growth:70 },
+    facebook:  { followers:0, views:'656', viewsNum:656, posts:6, engagement:0, engagementRate:'0.00%', engNum:0, growth:0 },
+    linkedin:  { followers:15, views:'—', viewsNum:0, posts:0, engagement:0, engagementRate:'—', engNum:0, growth:0 },
+    aggregate: { totalEngagement:28, avgEngagementRate:'2.35%', avgEngNum:2.35, totalViews:901, totalFollowers:740, growth:70, totalPosts:12 },
+    insights: { worked:'On Instagram, the Sep 23 Reel hit a 10% engagement rate (8 likes, 2 comments on 100 views) — roughly double every other post this month, and the only post that earned comments at all. On Facebook, Reels and only Reels delivered: the three posted Sep 23, 28 and 30 pulled 188–263 reach and 211–280 views apiece, purely on the strength of video distribution.', didntWork:'On Instagram, the two static image posts (Sep 11, Sep 25) and the carousel (Sep 17) underperformed on reach relative to Reels, even though two of them squeezed out decent engagement rates on tiny audiences. On Facebook, all three static image/link posts (Sep 11, 17, 25) landed at zero reach, zero views and zero engagement — essentially invisible.', improvements:'Lean further into Reels as the primary Instagram format (4 of 6 posts already were — keep going) and borrow whatever made the Sep 23 Reel land, since it\'s the only post that sparked a conversation instead of a passive like. On Facebook, stop producing static posts altogether, shift that time into Reels, and add a caption hook or CTA — Reels generated real view counts but zero likes, comments or shares, so people are watching but not acting.', audienceInsight:'Instagram\'s following (725 total, +70 new this month) is small but responsive when content earns a comment — this audience wants to engage, not just scroll, so prompting questions or reactions in captions should lift performance further. Facebook\'s audience (likely older, 35+) is a video-consumption audience on this platform, not a feed-scrolling, text-reading one — anything you want seen needs to be in motion.' },
+    audience: { gender:'54.6% Male', location:'New York, NY / Los Angeles, CA / Philadelphia, PA', age:'25–34, 35–44, 45–54, 55–64', profession:'Investors / Finance Professionals' },
+    ads: { spend:'—', impressions:'—', clicks:'—', ctr:'—', conversions:'—', cpc:'—', roas:'—', campaigns:[] },
+    topPosts: [
+      { rank:1, platform:'Instagram', type:'Reel', url:'https://www.instagram.com/reels/DdpHyxMDHB0/', caption:'Best post of the month — the only post to earn comments, roughly double every other post\'s engagement. Reach: 79, Impressions: 100, Likes: 8, Comments: 2, Eng Rate: 10%.' },
+      { rank:2, platform:'Instagram', type:'Post', url:'https://www.instagram.com/p/DdKOKUOGTYI/', caption:'Second top post. Reach: 37, Impressions: 87, Likes: 4, Eng Rate: 4%.' },
+      { rank:3, platform:'Instagram', type:'Reel', url:'https://www.instagram.com/reels/Dd2GmE3k4ek/', caption:'Third top post. Reach: 43, Impressions: 56, Likes: 6, Eng Rate: 6%.' },
+      { rank:1, platform:'Facebook', type:'Reel', url:'https://www.facebook.com/reel/4201615736803601', caption:'Top Facebook reel — strongest reach of the month on video distribution alone. Reach: 263, Impressions: 280, Eng Rate: 0%.' },
+      { rank:2, platform:'Facebook', type:'Reel', url:'https://www.facebook.com/reel/1429653635900131', caption:'Second top Facebook reel. Reach: 205, Impressions: 216 — watched, but no likes, comments or shares.' },
+      { rank:3, platform:'Facebook', type:'Reel', url:'https://www.facebook.com/reel/2353970982029614', caption:'Third top Facebook reel. Reach: 188, Impressions: 211 — Reels were the only format to reach anyone on Facebook.' }
+    ],
+    bottomPosts: [
+      { rank:1, platform:'Instagram', type:'Reel', url:'https://www.instagram.com/reels/Dd7QQg4gRe3/', caption:'Lower-performing post. Reach: 43, Impressions: 55, Likes: 2, Eng Rate: 2%.' },
+      { rank:2, platform:'Instagram', type:'Post', url:'https://www.instagram.com/p/DdZmfOJF0Ae/', caption:'Static post — limited reach relative to Reels. Reach: 25, Impressions: 53, Likes: 5, Eng Rate: 5%.' },
+      { rank:3, platform:'Instagram', type:'Post', url:'https://www.instagram.com/p/DduYNVKl1Ph/', caption:'Lowest-performing IG post. Reach: 18, Impressions: 48, Likes: 1, Eng Rate: 1%.' },
+      { rank:1, platform:'Facebook', type:'Post', url:'https://www.facebook.com/122124604251076891/posts/122153611839076891', caption:'Static post — 0 reach, 0 views, 0 likes, 0 comments. No measurable impact.' },
+      { rank:2, platform:'Facebook', type:'Post', url:'https://www.facebook.com/122124604251076891/posts/122154487065076891', caption:'Static post — zero traction. Facebook is not distributing static content organically.' },
+      { rank:3, platform:'Facebook', type:'Post', url:'https://www.facebook.com/122124604251076891/posts/122155811037076891', caption:'Static post — zero reach for the second month running. Time to retire this format on Facebook.' }
+    ],
+    feedback: [
+      { icon:'💬', title:'Conversation beats passive likes', text:'The Sep 23 Reel hit 10% engagement — double every other post — and was the only post this month to earn comments. Your Instagram audience wants to engage, not just scroll. Prompt questions and reactions in captions to replicate it.', type:'positive', tag:'Keep doing' },
+      { icon:'🚫', title:'Retire static posts on Facebook — for good', text:'All three static posts got 0 reach, 0 views and 0 engagement, matching August. Only Reels reach anyone on Facebook. Move that production time entirely into Reels.', type:'caution', tag:'Critical shift' },
+      { icon:'🎯', title:'Facebook viewers are watching but not acting', text:'Reels pulled 188–263 reach each (656 total), yet generated zero likes, comments or shares. Add a caption hook or a clear CTA to convert views into engagement.', type:'action', tag:'Next step' },
+      { icon:'📈', title:'Instagram growth more than doubled', text:'70 new followers this month (vs. 32 in August), bringing the total to 725. 4 of 6 posts were Reels — keep Reels as the primary format.', type:'positive', tag:'Momentum' },
+      { icon:'⏸️', title:'No LinkedIn activity reported for September', text:'No LinkedIn posts or metrics were reported this month. Following August\'s low results, decide whether to resume LinkedIn with a text/image-first approach or formally pause it to focus on Instagram.', type:'action', tag:'Evaluate' }
+    ]
   }
 };
 
-let currentMonth = 'aug26';
+let currentMonth = 'sep26';
 let currentTab = 'overview';
 
 document.getElementById('currentDate').textContent = new Date().toLocaleDateString('en-US',{weekday:'long',year:'numeric',month:'long',day:'numeric'});
